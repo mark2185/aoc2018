@@ -1,20 +1,7 @@
 #include <iostream>
-#include <fstream>
-#include <set>
+#include <numeric>
+#include <iterator>
 
-using namespace std;
 int main(void) {
-    int sum = 0;
-    int num;
-    ifstream file("input");
-    if (file) {
-        set<int> s;
-        while (file >> num) {
-            sum += num;
-        }
-        cout << sum << endl;
-    } else {
-        cout << "No file named input\n";
-    }
-    return 0;
+    std::cout << std::accumulate(std::istream_iterator<int>(std::cin), std::istream_iterator<int>(), 0) << '\n';
 }
