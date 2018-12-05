@@ -1,21 +1,16 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <stack>
 
 int main(void) {
-    std::ifstream f("input");
-    std::string line;
-    std::getline(f, line);
-    int i = 0;
-    while (line[i]) {
-        if (abs(line[i] - line[i+1]) == 32) {
-            line.erase(line.begin() + i);
-            line.erase(line.begin() + i);
-            i = std::max(i-1, 0);
-        } else {
-            ++i;
-        }
+    std::stack<char> stk;
+    char c;
+    std::cin >> c;
+    stk.push(c);
+    while (std::cin >> c) {
+        (abs(stk.top() - c) == 32) ? stk.pop() : stk.push(c);
     }
-    std::cout << line.size();
+    std::cout << stk.size() << std::endl;
     return 0;
 }
