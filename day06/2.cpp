@@ -33,5 +33,6 @@ int main(void) {
     }
 
     std::cout << cnt << std::endl;
+    fclose(fp);
     return 0;
 }

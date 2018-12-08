@@ -85,5 +85,6 @@ int main(void) {
     }
     std::cout << max_val << std::endl;
 
+    fclose(fp);
     return 0;
 }

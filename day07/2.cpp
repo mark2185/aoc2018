@@ -56,5 +56,6 @@ int main(void) {
     } while (!tasks.empty());
 
     std::cout << time-1 << std::endl;
+    fclose(fp);
     return 0;
 }

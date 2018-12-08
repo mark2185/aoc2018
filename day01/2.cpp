@@ -26,5 +26,6 @@ int main(void) {
     } else {
         cout << "No file named input\n";
     }
+    file.close();
     return 0;
 }

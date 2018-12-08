@@ -27,4 +27,5 @@ int main(void) {
         }
     }
     std::cout << ret << std::endl;
+    fclose(fp);
 }
