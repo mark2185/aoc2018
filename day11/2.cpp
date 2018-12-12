@@ -8,7 +8,7 @@ int calculate_power(int x, int y, int grid_serial) {
 }
 
 int main(void) {
-    int grid_serial_num = 9306;
+    int grid_serial_num = 2568;
     std::vector<std::vector<int>> field(301, std::vector<int>(301));
     for (int i = 1; i < 301; ++i) {
         for (int j = 1; j < 301; ++j) {

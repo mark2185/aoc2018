@@ -21,6 +21,5 @@ int main(void) {
         min_size = std::min(min_size, static_cast<int>(line.size()));
     }
     std::cout << min_size;
-    f.close();
     return 0;
 }
